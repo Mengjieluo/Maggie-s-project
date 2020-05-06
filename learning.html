@@ -42,16 +42,14 @@
   </head>
   <body>
     <h2 class="w3-center" style="font-family:courier">Learning Phase</h2>
-    
+
     <div class="w3-content w3-section">
-     
       <div class="slideshow-container">
-        
         <div class="mySlides">
           <div class="numbertext">1 / 11</div>
           <img src="./bal.jpg" style="width:100%" />
           <div class="text">bal</div>
-          <audio id="audio-1" loop>
+          <audio id="audio-1">
             <source src="./bal.wav" type="audio/wav" />
           </audio>
         </div>
@@ -170,7 +168,10 @@
 
       function playAudio(idx) {
         var audioElement = document.getElementById(`audio-${idx}`);
-        audioElement && audioElement.play();
+        if (audioElement) {
+          audioElement.play();
+          setTimeout(() => audioElement.play(), 2500);
+        }
       }
 
       function start() {
