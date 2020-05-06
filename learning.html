@@ -6,172 +6,204 @@
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <style>
-* {box-sizing: border-box;}
-body {font-family: courier;}
-.mySlides {display: none;
-  text-align: center;
-}
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: courier;
+      }
+      .mySlides {
+        display: none;
+        text-align: center;
+      }
 
-.slideshow-container {
-  margin: 0px auto;
-  width:500px; 
-  height:400px; 
-  text-align:center; 
-}
+      .slideshow-container {
+        margin: 0px auto;
+        width: 500px;
+        height: 400px;
+        text-align: center;
+      }
 
-.text {
-  color: black;
-  font-size: 50px;
-  padding: 2px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+      .text {
+        color: black;
+        font-size: 50px;
+        padding: 2px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
 
-</style>
+      #cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </head>
-    <body>
+  <body>
     <h2 class="w3-center" style="font-family:courier">Learning Phase</h2>
     <div class="w3-content w3-section">
-<div class="slideshow-container">
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 11</div>
+          <img src="./bal.jpg" style="width:100%" />
+          <div class="text">bal</div>
+          <audio controls id="audio-1">
+            <source src="./bal.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div class="mySlides">
-  <div class="numbertext">1 / 11</div>
-  <img src="./bal.jpg"style="width:100%">
-  <div class="text">bal</div>
-<audio controls autoplay>
-  <source src="./bal.wav" type="audio/wav" />
-</audio>
-</div>
+        <div class="mySlides">
+          <div class="numbertext">2 / 11</div>
+          <img src="./nun.jpg" style="width:100%" />
+          <div class="text">nun</div>
+          <audio controls id="audio-2">
+            <source src="./nun.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div class="mySlides">
-  <div class="numbertext">2 / 11</div>
-  <img src="./nun.jpg"style="width:100%">
-  <div class="text">nun</div>
-  <audio controls autoplay>
-  <source src="./nun.wav" type="audio/wav" />
-</audio>
-</div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 11</div>
+          <img src="./ssal.jpg" style="width:100%" />
+          <div class="text">ssal</div>
+          <audio controls id="audio-3" preload="auto">
+            <source src="./ssal.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div class="mySlides">
-  <div class="numbertext">3 / 11</div>
-  <img src="./ssal.jpg"style="width:100%">
-  <div class="text">ssal</div>
-  <audio controls autoplay>
-  <source src="./ssal.wav" type="audio/wav" />
-</audio>
-</div>
+        <div class="mySlides">
+          <div class="numbertext">4 / 11</div>
+          <img src="./maneul.jpg" style="width:100%" />
+          <div class="text">maneul</div>
+          <audio controls id="audio-4" preload="auto">
+            <source src="./maneul.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div class="mySlides">
-  <div class="numbertext">4 / 11</div>
-  <img src="./maneul.jpg"style="width:100%">
-  <div class="text">maneul</div>
-  <audio controls autoplay>
-  <source src="./maneul.wav" type="audio/wav" />
-</audio>
-</div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 11</div>
+          <img src="./don.jpg" style="width:100%" />
+          <div class="text">don</div>
+          <audio controls id="audio-5" preload="auto">
+            <source src="./don.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div class="mySlides">
-  <div class="numbertext">5 / 11</div>
-  <img src="./don.jpg"style="width:100%">
-  <div class="text">don</div>
-  <audio controls autoplay>
-  <source src="./don.wav" type="audio/wav" />
-</audio>
-</div>      
-      
-<div class="mySlides">
-  <div class="numbertext">6 / 11</div>
-  <img src="./haneul.jpg" style="width:100%">
-  <div class="text">haneul</div>
-  <audio controls autoplay>
-  <source src="./haneul.wav" type="audio/wav" />
-</audio>
-</div>      
-      
-<div class="mySlides">
-  <div class="numbertext">7 / 11</div>
-  <img src="./pal.jpg" style="width:100%">
-  <div class="text">pal</div>
-  <audio controls autoplay>
-  <source src="./pal.wav" type="audio/wav" />
-</audio>
-</div>      
-      
-<div class="mySlides">
-  <div class="numbertext">8 / 11</div>
-  <img src="./son.jpg" style="width:100%">
-  <div class="text">son</div>
-  <audio controls autoplay>
-  <source src="./son.wav" type="audio/wav" />
-</audio>
-</div>      
-      
-<div class="mySlides">
-  <div class="numbertext">9 / 11</div>
-  <img src="./dal.jpg" style="width:100%">
-  <div class="text">dal</div>
-  <audio controls autoplay>
-  <source src="./dal.wav" type="audio/wav" />
-</audio>
-</div>      
+        <div class="mySlides">
+          <div class="numbertext">6 / 11</div>
+          <img src="./haneul.jpg" style="width:100%" />
+          <div class="text">haneul</div>
+          <audio controls id="audio-6" preload="auto">
+            <source src="./haneul.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div class="mySlides">
-  <div class="numbertext">10 / 11</div>
-  <img src="./mun.jpg" style="width:100%">
-  <div class="text">mun</div>
-  <audio controls autoplay>
-  <source src="./mun.wav" type="audio/wav" />
-</audio>
-</div>      
+        <div class="mySlides">
+          <div class="numbertext">7 / 11</div>
+          <img src="./pal.jpg" style="width:100%" />
+          <div class="text">pal</div>
+          <audio controls id="audio-7" preload="auto">
+            <source src="./pal.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div class="mySlides">
-  <div class="numbertext">11 / 11</div>
-  <img src="./mal.jpg" style="width:100%">
-  <div class="text">mal</div>
-  <audio controls autoplay>
-  <source src="./mal.wav" type="audio/wav" />
-</audio>
-</div>      
-</div><br>
+        <div class="mySlides">
+          <div class="numbertext">8 / 11</div>
+          <img src="./son.jpg" style="width:100%" />
+          <div class="text">son</div>
+          <audio controls id="audio-8" preload="auto">
+            <source src="./son.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>      
-<script>
-var slideIndex = 0;
-showSlides();
+        <div class="mySlides">
+          <div class="numbertext">9 / 11</div>
+          <img src="./dal.jpg" style="width:100%" />
+          <div class="text">dal</div>
+          <audio controls id="audio-9" preload="auto">
+            <source src="./dal.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000);
-}
-</script>
+        <div class="mySlides">
+          <div class="numbertext">10 / 11</div>
+          <img src="./mun.jpg" style="width:100%" />
+          <div class="text">mun</div>
+          <audio controls id="audio-10" preload="auto">
+            <source src="./mun.wav" type="audio/wav" />
+          </audio>
+        </div>
 
-</body>
-</html> 
+        <div class="mySlides">
+          <div class="numbertext">11 / 11</div>
+          <img src="./mal.jpg" style="width:100%" />
+          <div class="text">mal</div>
+          <audio controls id="audio-11" preload="auto">
+            <source src="./mal.wav" type="audio/wav" />
+          </audio>
+        </div>
+      </div>
+    </div>
+    <br />
 
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div id="cover"><button id="start" onclick="start()">Start</button></div>
+    <script>
+      var slideIndex = 0;
+
+      function playAudio(idx) {
+        var audioElement = document.getElementById(`audio-${idx}`);
+        audioElement && audioElement.play();
+      }
+
+      function start() {
+        showSlides();
+        document.getElementById("cover").style.display = "none";
+      }
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex <= slides.length) {
+          setTimeout(showSlides, 5000);
+        } else {
+          //到时候把window前面的//去掉，把网址替换成你要跳转的页面网址就可以了
+          //window.location.href = "https://www.psytoolkit.org/c/3.0.0/survey?s=aUMfJ";
+          return undefined;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        playAudio(slideIndex);
+      }
+    </script>
+  </body>
+</html>
