@@ -39,6 +39,7 @@
         justify-content: center;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <h2 class="w3-center" style="font-family:courier">Learning Site</h2>
@@ -46,7 +47,6 @@
     <div class="w3-content w3-section">
       <div class="slideshow-container">
         <div class="mySlides">
-          <div class="numbertext">1 / 11</div>
           <img src="./bal.jpg" style="width:100%" />
           <div class="text">bal</div>
           <audio id="audio-1">
@@ -55,7 +55,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">2 / 11</div>
           <img src="./nun.jpg" style="width:100%" />
           <div class="text">nun</div>
           <audio id="audio-2">
@@ -64,7 +63,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">3 / 11</div>
           <img src="./ssal.jpg" style="width:100%" />
           <div class="text">ssal</div>
           <audio id="audio-3" preload="auto">
@@ -73,7 +71,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">4 / 11</div>
           <img src="./maneul.jpg" style="width:100%" />
           <div class="text">maneul</div>
           <audio id="audio-4" preload="auto">
@@ -82,7 +79,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">5 / 11</div>
           <img src="./don.jpg" style="width:100%" />
           <div class="text">don</div>
           <audio id="audio-5" preload="auto">
@@ -91,7 +87,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">6 / 11</div>
           <img src="./haneul.jpg" style="width:100%" />
           <div class="text">haneul</div>
           <audio id="audio-6" preload="auto">
@@ -100,7 +95,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">7 / 11</div>
           <img src="./pal.jpg" style="width:100%" />
           <div class="text">pal</div>
           <audio id="audio-7" preload="auto">
@@ -109,7 +103,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">8 / 11</div>
           <img src="./son.jpg" style="width:100%" />
           <div class="text">son</div>
           <audio id="audio-8" preload="auto">
@@ -118,7 +111,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">9 / 11</div>
           <img src="./dal.jpg" style="width:100%" />
           <div class="text">dal</div>
           <audio id="audio-9" preload="auto">
@@ -127,7 +119,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">10 / 11</div>
           <img src="./mun.jpg" style="width:100%" />
           <div class="text">mun</div>
           <audio id="audio-10" preload="auto">
@@ -136,7 +127,6 @@
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">11 / 11</div>
           <img src="./mal.jpg" style="width:100%" />
           <div class="text">mal</div>
           <audio id="audio-11" preload="auto">
@@ -165,6 +155,19 @@
     <div id="cover"><button id="start" onclick="start()">Start</button></div>
     <script>
       var slideIndex = 0;
+
+      var parent = $(".slideshow-container");
+      var divs = parent.children();
+
+      while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+      }
+
+      var newDivs = parent.children();
+
+      for (let x = 0; x < newDivs.length; x++) {
+        newDivs[x].prepend($(`<div class="numbertext">${x + 1} / ${newDivs.length}</div>`)[0]);
+      }
 
       function playAudio(idx) {
         var audioElement = document.getElementById(`audio-${idx}`);
