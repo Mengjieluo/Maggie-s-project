@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Psyexperiment_learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      body {
+        font-family: courier;
+      }
+      .mySlides {
+        display: none;
+        text-align: center;
+        overflow: auto;
+      }
+
+      .slideshow-container {
+        margin: 0px auto;
+        width: 500px;
+        height: 400px;
+        text-align: center;
+      }
+
+      .text {
+        color: black;
+        font-size: 50px;
+        text-align: right;
+      }
+      .img {
+      float: left;
+      }
+
+      #cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2 class="w3-center" style="font-family:courier">Learning Site</h2>
+
+    <div class="w3-content w3-section">
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <img class="img" src="./bal.jpg" style="width:100%" />
+          <div class="text">bal</div>
+          <audio id="audio-1">
+            <source src="./bal.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./nun.jpg" style="width:100%" />
+          <div class="text">nun</div>
+          <audio id="audio-2">
+            <source src="./nun.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./ssal.jpg" style="width:100%" />
+          <div class="text">ssal</div>
+          <audio id="audio-3" preload="auto">
+            <source src="./ssal.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./maneul.jpg" style="width:100%" />
+          <div class="text">maneul</div>
+          <audio id="audio-4" preload="auto">
+            <source src="./maneul.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./don.jpg" style="width:100%" />
+          <div class="text">don</div>
+          <audio id="audio-5" preload="auto">
+            <source src="./don.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./haneul.jpg" style="width:100%" />
+          <div class="text">haneul</div>
+          <audio id="audio-6" preload="auto">
+            <source src="./haneul.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./pal.jpg" style="width:100%" />
+          <div class="text">pal</div>
+          <audio id="audio-7" preload="auto">
+            <source src="./pal.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./son.jpg" style="width:100%" />
+          <div class="text">son</div>
+          <audio id="audio-8" preload="auto">
+            <source src="./son.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./dal.jpg" style="width:100%" />
+          <div class="text">dal</div>
+          <audio id="audio-9" preload="auto">
+            <source src="./dal.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./mun.jpg" style="width:100%" />
+          <div class="text">mun</div>
+          <audio id="audio-10" preload="auto">
+            <source src="./mun.wav" type="audio/wav" />
+          </audio>
+        </div>
+
+        <div class="mySlides">
+          <img class="img" src="./mal.jpg" style="width:100%" />
+          <div class="text">mal</div>
+          <audio id="audio-11" preload="auto">
+            <source src="./mal.wav" type="audio/wav" />
+          </audio>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div id="cover"><button id="start" onclick="start()">Start</button></div>
+    <script>
+      var slideIndex = 0;
+
+      var parent = $(".slideshow-container");
+      var divs = parent.children();
+
+      while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+      }
+
+      var newDivs = parent.children();
+
+      for (let x = 0; x < newDivs.length; x++) {
+        newDivs[x].prepend($(`<div class="numbertext">${x + 1} / ${newDivs.length}</div>`)[0]);
+        newDivs[x].children[3].id = `audio-${x + 1}`;
+      }
+
+      function playAudio(idx) {
+        var audioElement = document.getElementById(`audio-${idx}`);
+        if (audioElement) {
+          audioElement.play();
+          setTimeout(() => audioElement.play(), 2500);
+        }
+      }
+
+      function start() {
+        showSlides();
+        document.getElementById("cover").style.display = "none";
+      }
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex <= slides.length) {
+          setTimeout(showSlides, 5000);
+        } else {
+          window.location.href = "https://mengjieluo.github.io/Psyexperiment/starttesting.html";
+          return undefined;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        playAudio(slideIndex);
+      }
+    </script>
+  </body>
+</html>
