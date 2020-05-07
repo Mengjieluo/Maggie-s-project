@@ -150,7 +150,7 @@
 
       for (let x = 0; x < newDivs.length; x++) {
         newDivs[x].prepend($(`<div class="numbertext">${x + 1} / ${newDivs.length}</div>`)[0]);
-        newDivs[x].children[3].id = `audio-${x + 1}`;
+        newDivs[x].children[2].id = `audio-${x + 1}`;
       }
 
       function playAudio(idx) {
