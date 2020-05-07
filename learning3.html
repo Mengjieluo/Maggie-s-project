@@ -40,6 +40,7 @@
 
     <div class="w3-content w3-section">
       <div class="slideshow-container">
+       
         <div class="mySlides">
           <img src="./bal.jpg" style="width:100%" />
           <audio id="audio-1">
@@ -145,14 +146,12 @@
       while (divs.length) {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
       }
-
       var newDivs = parent.children();
 
       for (let x = 0; x < newDivs.length; x++) {
         newDivs[x].prepend($(`<div class="numbertext">${x + 1} / ${newDivs.length}</div>`)[0]);
         newDivs[x].children[2].id = `audio-${x + 1}`;
       }
-
       function playAudio(idx) {
         var audioElement = document.getElementById(`audio-${idx}`);
         if (audioElement) {
@@ -160,7 +159,6 @@
           setTimeout(() => audioElement.play(), 2500);
         }
       }
-
       function start() {
         showSlides();
         document.getElementById("cover").style.display = "none";
