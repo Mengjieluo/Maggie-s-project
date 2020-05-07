@@ -28,7 +28,7 @@
         text-align: right;
       }
       .img {
-      float: left;
+        float: left;
       }
 
       #cover {
@@ -51,23 +51,32 @@
     <div class="w3-content w3-section">
       <div class="slideshow-container">
         <div class="mySlides">
-          <img src="./bal.jpg">
+          <img src="./bal.jpg" />
+          <video width="200" height="150" id="video-1" preload="auto">
+            <source src="./bal.mp4" type="video/mp4" />
+          </video>
           <div class="text">bal</div>
-          <audio id="audio-1">
+          <audio id="audio-1" preload="auto">
             <source src="./bal.wav" type="audio/wav" />
           </audio>
         </div>
 
         <div class="mySlides">
-          <img src="./nun.jpg">
+          <img src="./nun.jpg" />
+          <video width="200" height="150" id="video-2" preload="auto">
+            <source src="./nun.mp4" type="video/mp4" />
+          </video>
           <div class="text">nun</div>
-          <audio id="audio-2">
+          <audio id="audio-2" preload="auto">
             <source src="./nun.wav" type="audio/wav" />
           </audio>
         </div>
 
         <div class="mySlides">
-          <img src="./ssal.jpg">
+          <img src="./ssal.jpg" />
+          <video width="200" height="150" id="video-3" preload="auto">
+            <source src="./ssal.mp4" type="video/mp4" />
+          </video>
           <div class="text">ssal</div>
           <audio id="audio-3" preload="auto">
             <source src="./ssal.wav" type="audio/wav" />
@@ -75,7 +84,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./maneul.jpg">
+          <img src="./maneul.jpg" />
+          <video width="200" height="150" id="video-4" preload="auto">
+            <source src="./maneul.mp4" type="video/mp4" />
+          </video>
           <div class="text">maneul</div>
           <audio id="audio-4" preload="auto">
             <source src="./maneul.wav" type="audio/wav" />
@@ -83,7 +95,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./don.jpg">
+          <img src="./don.jpg" />
+          <video width="200" height="150" id="video-5" preload="auto">
+            <source src="./don.mp4" type="video/mp4" />
+          </video>
           <div class="text">don</div>
           <audio id="audio-5" preload="auto">
             <source src="./don.wav" type="audio/wav" />
@@ -91,7 +106,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./haneul.jpg">
+          <img src="./haneul.jpg" />
+          <video width="200" height="150" id="video-6" preload="auto">
+            <source src="./haneul.mp4" type="video/mp4" />
+          </video>
           <div class="text">haneul</div>
           <audio id="audio-6" preload="auto">
             <source src="./haneul.wav" type="audio/wav" />
@@ -99,7 +117,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./pal.jpg">
+          <img src="./pal.jpg" />
+          <video width="200" height="150" id="video-7" preload="auto">
+            <source src="./pal.mp4" type="video/mp4" />
+          </video>
           <div class="text">pal</div>
           <audio id="audio-7" preload="auto">
             <source src="./pal.wav" type="audio/wav" />
@@ -107,7 +128,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./son.jpg">
+          <img src="./son.jpg" />
+          <video width="200" height="150" id="video-8" preload="auto">
+            <source src="./son.mp4" type="video/mp4" />
+          </video>
           <div class="text">son</div>
           <audio id="audio-8" preload="auto">
             <source src="./son.wav" type="audio/wav" />
@@ -115,7 +139,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./dal.jpg">
+          <img src="./dal.jpg" />
+          <video width="200" height="150" id="video-9" preload="auto">
+            <source src="./dal.mp4" type="video/mp4" />
+          </video>
           <div class="text">dal</div>
           <audio id="audio-9" preload="auto">
             <source src="./dal.wav" type="audio/wav" />
@@ -123,7 +150,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./mun.jpg">
+          <img src="./mun.jpg" />
+          <video width="200" height="150" id="video-10" preload="auto">
+            <source src="./mun.mp4" type="video/mp4" />
+          </video>
           <div class="text">mun</div>
           <audio id="audio-10" preload="auto">
             <source src="./mun.wav" type="audio/wav" />
@@ -131,7 +161,10 @@
         </div>
 
         <div class="mySlides">
-          <img src="./mal.jpg">
+          <img src="./mal.jpg" />
+          <video width="200" height="150" id="video-11" preload="auto">
+            <source src="./mal.mp4" type="video/mp4" />
+          </video>
           <div class="text">mal</div>
           <audio id="audio-11" preload="auto">
             <source src="./mal.wav" type="audio/wav" />
@@ -170,15 +203,23 @@
       var newDivs = parent.children();
 
       for (let x = 0; x < newDivs.length; x++) {
-        newDivs[x].prepend($(`<div class="numbertext">${x + 1} / ${newDivs.length}</div>`)[0]);
-        newDivs[x].children[3].id = `audio-${x + 1}`;
+        newDivs[x].prepend(
+          $(`<div class="numbertext" style="text-align: center">${x + 1} / ${newDivs.length}</div>`)[0]
+        );
+        newDivs[x].children[4].id = `audio-${x + 1}`;
+        newDivs[x].children[2].id = `video-${x + 1}`;
       }
 
       function playAudio(idx) {
         var audioElement = document.getElementById(`audio-${idx}`);
+        var videoElement = document.getElementById(`video-${idx}`);
         if (audioElement) {
           audioElement.play();
-          setTimeout(() => audioElement.play(), 2500);
+          videoElement.play();
+          setTimeout(() => {
+            audioElement.play();
+            videoElement.play();
+          }, 2500);
         }
       }
 
