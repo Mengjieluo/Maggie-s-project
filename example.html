@@ -11,32 +11,14 @@
       }
       .mySlides {
         display: none;
-        margin: auto;
-        overflow: auto;
+        text-align: center;
       }
 
       .slideshow-container {
-        margin: auto;
+        margin: 0px auto;
         width: 500px;
         height: 400px;
-        padding-top: 50px;
-      }
-
-      .text {
-        color: black;
-        font-size: 50px;
         text-align: center;
-      }
-       .text1 {
-        color: black;
-        font-size: 50px;
-        text-align: right;
-      }
-      img {
-        float: left;
-      }
-      video {
-        float: right;
       }
 
       #cover {
@@ -50,6 +32,7 @@
         align-items: center;
         justify-content: center;
       }
+ 
     </style>
   </head>
   <body>
@@ -105,25 +88,20 @@
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
+      <span class="dot"></span>
     </div>
 
     <div id="cover"><button id="start" onclick="start()">Start</button></div>
     <script>
-  var slideIndex = 0;
-
+      var slideIndex = 0;
+      
       function playAudio(idx) {
         var audioElement = document.getElementById(`audio-${idx}`);
-        var videoElement = document.getElementById(`video-${idx}`);
         if (audioElement) {
           audioElement.play();
-          videoElement.play();
-          setTimeout(() => {
-            audioElement.play();
-            videoElement.play();
-          }, 2500);
+          setTimeout(() => audioElement.play(), 2500);
         }
       }
-
       function start() {
         showSlides();
         document.getElementById("cover").style.display = "none";
