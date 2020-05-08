@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 body{background-color: aliceblue}
-a:link, a:visited {
+button {
   background-color: lightblue;
   color: black;
   font-family: courier;
@@ -15,7 +15,7 @@ a:link, a:visited {
   text-decoration: none;
   display: inline-block;
   }
-  a:hover, a:active {
+  button:hover,button:active {
   background-color: dodgerblue;
   color: white;
 }
@@ -27,19 +27,23 @@ a:link, a:visited {
 
 <div class="w3-container w3-border w3-large"style="font-family:courier">
    <div class="w3-left-align"><p><strong>Before you start, please read carefully the following:</strong></p>
-     <p>The link below will direct you to a learning site<br><p><strong>In the learning site:</strong>
-     <br>You will need to <span style="color:red">learn</span> some Korean words.
-     <br>You will <span style="color:red">hear</span> those words while <span style="color:red">seeing</span> the picture representation of their meanings.
-     <br>You will have <span style="color:red">5 seconds</span> to learn each word.
-     <br>There will be <span style="color:red">a quizz</span> after to test your learning outcome.</p>
-     <p style="color:red"><strong>Make sure your microphone is working and adjust the volume to approapriate level (preferably higher).</strong></p>
-     <p><strong>Try your best to remember as many words as you can. Good luck!</strong></p>
+     <p>The link below will direct you to a learning site<br>
+     <p><strong>In the learning site:</strong>
+       <br><span style="color:red">There will be an automatic slideshow.
+       <br>In each slide, you will see an image of an object and hear its name in Korean.
+       <br>Your task is to memorize the sound of its Korean name and its meaning.
+       <br>You will have 5 seconds to learn each word.</span></p>
+       <p><a href="https://mengjieluo.github.io/Psyexperiment/example.html">Click here to see an example of the slideshow</a></p>
+     <p><strong>Important message:</strong> you may or may not be given written form of the object's Korean name in romanized syllable(s) 
+       or seeing a video of someone's lips articulating the sound. If you do see either or both of the above mentioned input, please utilize them to help you learn. If not, please ignore this message.</p>
+     <p style="color:red">Make sure your microphone is working and adjust the volume to approapriate level (preferably high).
+     <br>Recommended browser: Chrome.</p>
    </div>
 </div>
 
 <div class="w3-container w3-center" style="font-family:courier">
 <div class="w3-center">
-<a href="#" onclick="window.location.href=`https://mengjieluo.github.io/Psyexperiment/learning${Math.floor(Math.random()*4+1)}.html`">Click here to start Learning</a>
+<button onclick="window.location.href=`https://mengjieluo.github.io/Psyexperiment/learning${Math.floor(Math.random()*4+1)}.html`">Click here to start Learning</button>
 </div>
 </div>
 
