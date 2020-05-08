@@ -59,7 +59,7 @@
 
         <div class="mySlides">
           <img src="pineapple.jpg" style="width:250px;height:250px"/>
-          <video width="200" height="150" id="video-1" preload="auto">
+          <video width="200" height="150" id="video-3" preload="auto">
             <source src="pineapple.mp4" type="video/mp4" />
           </video>
           <audio id="audio-3" preload="auto">
@@ -70,7 +70,7 @@
         <div class="mySlides">
           <img src="pineapple.jpg" style="width:250px;height:250px"/>
                 <div class="text1">pineapple</div>
-                    <video width="200" height="150" id="video-2" preload="auto">
+                    <video width="200" height="150" id="video-4" preload="auto">
             <source src="pineapple.mp4" type="video/mp4" />
           </video>
           <audio id="audio-4" preload="auto">
@@ -91,8 +91,6 @@
       <span class="dot"></span>
     </div>
 
-    <div id="cover"><button id="start" onclick="start()">Start</button></div>
-    <script>
       var slideIndex = 0;
       
       function playAudio(idx) {
@@ -101,6 +99,19 @@
           audioElement.play();
           setTimeout(() => audioElement.play(), 2500);
         }
+              function playAudio(idx) {
+        var audioElement = document.getElementById(`audio-${idx}`);
+        var videoElement = document.getElementById(`video-${idx}`);
+        if (audioElement) {
+          audioElement.play();
+          videoElement.play();
+          setTimeout(() => {
+            audioElement.play();
+            videoElement.play();
+          }, 2500);
+        }
+      }
+
       }
       function start() {
         showSlides();
