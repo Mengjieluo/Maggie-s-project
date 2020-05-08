@@ -17,12 +17,17 @@
 
       .slideshow-container {
         margin: auto;
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 400px;
         padding-top: 50px;
       }
 
       .text {
+        color: black;
+        font-size: 50px;
+        text-align: center;
+      }
+       .text1 {
         color: black;
         font-size: 50px;
         text-align: right;
@@ -56,14 +61,14 @@
       <div class="slideshow-container">
         
         <div class="mySlides">
-          <img src="pineapple.jpg" />
+          <img src="pineapple.jpg" style="width:250px;height:250px"/>
           <audio id="audio-1" preload="auto">
             <source src="https://upload.wikimedia.org/wikipedia/commons/f/fd/En-us-pineapple.ogg"/>
           </audio>
         </div>
 
         <div class="mySlides">
-          <img src="pineapple.jpg" style="width:250px;height:250px"/>
+          <img src="pineapple.jpg" id="img" style="width:250px;height:250px"/>
           <div class="text">pineapple</div>
           <audio id="audio-2" preload="auto">
             <source src="https://upload.wikimedia.org/wikipedia/commons/f/fd/En-us-pineapple.ogg"/>
@@ -85,7 +90,7 @@
                     <video width="200" height="150" id="video-4" preload="auto">
             <source src="pineapple.mp4" type="video/mp4" />
           </video>
-          <div class="text">pineapple</div>
+          <div class="text1">pineapple</div>
           <audio id="audio-4" preload="auto">
             <source src="https://upload.wikimedia.org/wikipedia/commons/f/fd/En-us-pineapple.ogg"/>
           </audio>
@@ -96,15 +101,7 @@
     </div>
     <br />
 
-    <div style="text-align:center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <div style="text-align:center">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
@@ -144,7 +141,7 @@
         if (slideIndex <= slides.length) {
           setTimeout(showSlides, 5000);
         } else {
-          window.location.href = "https://mengjieluo.github.io/Psyexperiment/startlearning.html";
+          window.location.href = "https://mengjieluo.github.io/Psyexperiment/starttesting2.html";
           return undefined;
         }
         for (i = 0; i < dots.length; i++) {
